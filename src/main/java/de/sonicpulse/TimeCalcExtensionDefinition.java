@@ -29,7 +29,7 @@ public class TimeCalcExtensionDefinition extends ControllerExtensionDefinition
    @Override
    public String getVersion()
    {
-      return "0.1";
+      return "0.2";
    }
 
    @Override

@@ -6,7 +6,7 @@
 	<artifactId>TimeCalc</artifactId>
 	<packaging>jar</packaging>
 	<name>TimeCalc</name>
-	<version>0.1</version>
+	<version>0.2</version>
 	
 	<repositories>
        <repository>
@@ -38,7 +38,7 @@
                   <encoding>UTF-8</encoding>
                   <maxmem>1024m</maxmem>
                </configuration>
-         </plugin>
+            </plugin>
 		
 			<plugin>
 				<groupId>com.coderplus.maven.plugins</groupId>
