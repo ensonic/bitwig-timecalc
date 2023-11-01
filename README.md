@@ -18,10 +18,9 @@ cp target/TimeCalc.bwextension ~/Bitwig\ Studio/Extensions/
 
 ## Activate the extension
 
-Then go to `Settings > Controller` and add a new one.
-
-Pick `ensonic` as the vendor and select `TimeCalc` as the hardware. The
-extension does not have any settings (yet).
+Go to `Settings > Controller` and add a new one. Pick `ensonic` as the vendor
+and select `TimeCalc` as the hardware. The extension does not have any settings
+(yet).
 
 Now you'll find the extension at top-left of Bitwig Studio:
 
