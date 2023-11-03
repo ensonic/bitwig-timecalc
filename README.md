@@ -1,7 +1,7 @@
 # TimeCalc
 
-A simple time & frequency calculator for Bitwig Studio. This can be useful to
-e.g. set the attack and release values of a compressor.
+A simple time & frequency calculator extension for [Bitwig Studio](https://www.bitwig.com).
+This can be useful to e.g. set the attack and release values of a compressor.
 
 ## Install from a release
 
