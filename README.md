@@ -7,9 +7,16 @@ e.g. set the attack and release values of a compressor.
 
 Download the latest `.bwextension` file from the [releases](https://github.com/ensonic/bitwig-timecalc/releases)
 page and copy it into the `Extensions` folder of your Bitwig Studio
-installation. 
+installation:
+* Linux: ~/Bitwig Studio/Extensions/
+* Mac: ~/Documents/Bitwig Studio/Extensions/
+* Windows: %USERPROFILE%\Documents\Bitwig Studio\Extensions\
+
+For Bitwig Studio > 3.4, you can also drag the file from your downloads into the Bitwig Studio window.
 
 ## Build & install from code
+
+I am assuming Linux here.
 
 ```shell
 mvn install
@@ -30,3 +37,8 @@ Now you'll find the extension at top-left of Bitwig Studio:
 
 The shown values are based on the current tempo. Simply select the value you
 need, copy it and paste it into the device
+
+## Tutorials
+
+* Odo Sendaidokai: [de](https://www.youtube.com/watch?v=JeCr-3fabak) [en](https://www.youtube.com/watch?v=vma4DL57EjI)
+* Polarity Musik: [en](https://www.youtube.com/watch?v=J0682VqS7hM)
