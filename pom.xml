@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.ensonic</groupId>
+	<groupId>de.sonicpulse</groupId>
 	<artifactId>TimeCalc</artifactId>
 	<packaging>jar</packaging>
 	<name>TimeCalc</name>
 	<version>0.2</version>
-	
+
 	<repositories>
-       <repository>
-         <id>bitwig</id>
-         <name>Bitwig Maven Repository</name>
-         <url>https://maven.bitwig.com</url>
-       </repository>
-   </repositories>
+		<repository>
+			<id>bitwig</id>
+			<name>Bitwig Maven Repository</name>
+			<url>https://maven.bitwig.com</url>
+		</repository>
+	</repositories>
 
 	<dependencies>
 		<dependency>
@@ -26,20 +26,20 @@
 
 	<build>
 		<plugins>
-		   <plugin>
-               <groupId>org.apache.maven.plugins</groupId>
-               <artifactId>maven-compiler-plugin</artifactId>
-               <version>3.8.0</version>
-               <configuration>
-                  <optimize>true</optimize>
-                  <fork>true</fork>
-                  <source>1.8</source>
-                  <target>1.8</target>
-                  <encoding>UTF-8</encoding>
-                  <maxmem>1024m</maxmem>
-               </configuration>
-            </plugin>
-		
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<optimize>true</optimize>
+					<fork>true</fork>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+					<maxmem>1024m</maxmem>
+				</configuration>
+			</plugin>
+
 			<plugin>
 				<groupId>com.coderplus.maven.plugins</groupId>
 				<artifactId>copy-rename-maven-plugin</artifactId>
