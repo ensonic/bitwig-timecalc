@@ -54,6 +54,10 @@ public class TimeCalcExtension extends ControllerExtension {
    }
 
    private void onTempoChanged(double value) {
+      if (value < 0.0 || value > 1.0) {
+         log(String.format("Out of range value for tempo %f", value));
+         return;
+      }
       // value is 0.0 ... 1.0 - no idea if I can obtain the min/max from somewhere
       double bpm = 20.0 + 646.0 * value;
       // log(String.format("%.2f bpm", bpm));
