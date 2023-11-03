@@ -64,6 +64,12 @@ public class TimeCalcExtensionDefinition extends ControllerExtensionDefinition {
    }
 
    @Override
+   public String getHelpFilePath() {
+      // TODO: where is this used?
+      return "https://github.com/ensonic/bitwig-timecalc/blob/main/README.md#timecalc";
+   }
+
+   @Override
    public TimeCalcExtension createInstance(final ControllerHost host) {
       return new TimeCalcExtension(this, host);
    }
