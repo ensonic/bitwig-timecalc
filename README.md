@@ -35,8 +35,11 @@ Now you'll find the extension at top-left of Bitwig Studio:
 
 ## Usage
 
-The shown values are based on the current tempo. Simply select the value you
-need, copy it and paste it into the device
+The shown values are based on the current tempo. For each note, you get the
+duration in ms and the frequency corresponing the wevelength in Hz. Simply
+select the value you need, copy it and paste it into the device.
+
+The values are empty, if the audio engine is disabled fro the current project.
 
 ## Tutorials
 
