@@ -46,7 +46,6 @@ public class TimeCalcExtension extends ControllerExtension {
 
       tempo = host.createTransport().tempo();
       tempo.value().addValueObserver(value -> onTempoChanged(value));
-      onTempoChanged(tempo.get());
       type.addValueObserver(value -> onTempoChanged(tempo.get()));
 
       log("TimeCalc initialized");
