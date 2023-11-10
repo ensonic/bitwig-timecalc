@@ -75,6 +75,8 @@ public class TimeCalcExtension extends ControllerExtension {
       // 240 bpm: 1/1 == 1000.0 ms | 1.0 Hz
       double s = (4.0 * 60.0 / bpm) * fc;
       for (int i = 0; i < N; i++) {
+         // This marks the song as dirty :/
+         // https://github.com/ensonic/bitwig-timecalc/issues/4
          time[i].set(String.format("%.2f ms | %.2f Hz", s * 1000.0, 1.0 / s));
          s /= 2.0;
       }
