@@ -30,7 +30,6 @@ public class TimeCalcExtension extends ControllerExtension {
    @Override
    public void init() {
       host = getHost();
-      log("TimeCalc initializing ...");
       documentState = host.getDocumentState();
 
       // Panel UI
