@@ -6,7 +6,7 @@
 	<artifactId>TimeCalc</artifactId>
 	<packaging>jar</packaging>
 	<name>TimeCalc</name>
-	<version>0.2</version>
+	<version>0.3</version>
 
 	<repositories>
 		<repository>
@@ -62,4 +62,3 @@
 	</build>
 
 </project>
-
