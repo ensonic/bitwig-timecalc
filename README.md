@@ -34,6 +34,8 @@ Now you'll find the extension at top-left of Bitwig Studio:
 
 ![main ui](/docs/main.png)
 
+> Note: the values in are only filled, once you start modifying the project. This is done, as oherwise Bitwig Studio will mark the project as modified when this extension updates the window.
+
 ## Usage
 
 The shown values are based on the current tempo. For each note, you get the

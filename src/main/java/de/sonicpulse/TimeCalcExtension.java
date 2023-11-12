@@ -1,8 +1,10 @@
 package de.sonicpulse;
 
+import com.bitwig.extension.controller.api.BooleanValue;
 import com.bitwig.extension.controller.api.ControllerHost;
 import com.bitwig.extension.controller.api.DocumentState;
 import com.bitwig.extension.controller.api.Parameter;
+import com.bitwig.extension.controller.api.Project;
 import com.bitwig.extension.controller.api.SettableEnumValue;
 import com.bitwig.extension.controller.api.SettableStringValue;
 import com.bitwig.extension.controller.ControllerExtension;
@@ -14,6 +16,7 @@ public class TimeCalcExtension extends ControllerExtension {
    private ControllerHost host;
    private DocumentState documentState;
    private Parameter tempo;
+   private BooleanValue isModified;
 
    private SettableEnumValue type;
    private SettableStringValue[] time = new SettableStringValue[N];
@@ -32,6 +35,9 @@ public class TimeCalcExtension extends ControllerExtension {
       host = getHost();
       documentState = host.getDocumentState();
 
+      isModified = host.getProject().isModified();
+      isModified.markInterested();
+
       // Panel UI
       // The 2nd parameters "category" seems to be used to oder things
       // Ideally we'd format the notes into a grid, but there seem to be no
@@ -47,6 +53,7 @@ public class TimeCalcExtension extends ControllerExtension {
       tempo = host.createTransport().tempo();
       tempo.value().addValueObserver(value -> onTempoChanged(value));
       type.addValueObserver(value -> onTempoChanged(tempo.get()));
+      isModified.addValueObserver(value -> onTempoChanged(tempo.get()));
 
       log("TimeCalc initialized");
    }
@@ -56,6 +63,11 @@ public class TimeCalcExtension extends ControllerExtension {
          log(String.format("Out of range value for tempo %f", value));
          return;
       }
+      if (!isModified.get()) {
+         // if not modified, return to not modify the project
+         return;
+      }
+
       // value is 0.0 ... 1.0 - no idea if I can obtain the min/max from somewhere
       double bpm = 20.0 + 646.0 * value;
       // log(String.format("%.2f bpm", bpm));
